@@ -1,0 +1,54 @@
+﻿@model BartenderFinal.Models.DrinkOrder;
+
+    @{
+        ViewData["Title"] = "Drinks Menu";
+    }
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Order a Drink</title>
+    </head>
+    <body>
+        <h2>Drink Menu</h2>
+        <form asp-action="DrinkForm" method="post">
+            <table style="width:30%">
+                <tr>
+
+                    <td>
+                        <strong>
+                            Drink Name
+                        </strong>
+                    </td>
+                    <td> <strong>Price</strong></td>
+
+                </tr>
+                <tr>
+                    <td>Margarita</td>
+                    <td>$6.00</td>
+                </tr>
+                <tr>
+                    <td>Vodka</td>
+                    <td>$5.00</td>
+                </tr>
+                <tr>
+
+                    <td>Toilet Water</td>
+                    <td>Free</td>
+                </tr>
+            </table>
+            <p>
+                <label>Pick a drink:</label>
+                <select asp-for="DrinkName">
+                    <option value="">--</option>
+                    <option value="Margarita">Margarita</option>
+                    <option value="Vodka">Vodka</option>
+                    <option value="Water">Toilet Water</option>
+                </select>
+            </p>
+            
+            <button type="submit">Choose This Drink</button>
+        </form>
+    </body>
+</html>
+
+
